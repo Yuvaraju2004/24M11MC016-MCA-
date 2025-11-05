@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Taking Input</title>
+</head>
+<body>
+
+  <h2>Taking Input in JavaScript</h2>
+
+  <!-- 1. Using prompt() -->
+  <script>
+    const yourName = prompt("Enter your name:");
+    alert("Hello, " + yourName);
+  </script>
+
+  <br><br>
+
+  <!-- 2. Using input box and button -->
+  <input type="text" id="nameInput" placeholder="Enter your name here">
+  <button onclick="showName()">Submit</button>
+
+  <p id="displayName"></p>
+
+  <script>
+    function showName() {
+      var name = document.getElementById("nameInput").value;
+      document.getElementById("displayName").innerText = "Your name is: " + name;
+    }
+  </script>
+
+</body>
+</html>

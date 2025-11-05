@@ -1,0 +1,47 @@
+
+<html>
+<head>
+  <title>Array Methods Demo</title>
+</head>
+<body>
+  <h2>Array Object</h2>
+  <button onclick="arrayDemo()">Run Demo</button>
+
+  <script>
+    function arrayDemo() {
+      let fruits = ["Apple", "Banana", "Cherry"];
+
+      // Display original array
+      alert("Original array: " + fruits.join(", "));
+
+      // Push - add to end
+      fruits.push("Mango");
+      alert("After push('Mango'): " + fruits.join(", "));
+
+      // Pop - remove from end
+      fruits.pop();
+      alert("After pop(): " + fruits.join(", "));
+
+      // Unshift - add to beginning
+      fruits.unshift("Orange");
+
+      alert("After unshift('Orange'): " + fruits.join(", "));
+
+      // Shift - remove from beginning
+      fruits.shift();
+      alert("After shift(): " + fruits.join(", "));
+
+      // indexOf
+      let index = fruits.indexOf("Banana");
+      alert("Index of 'Banana': " + index);
+
+      // includes
+      let hasCherry = fruits.includes("Cherry");
+      alert("Includes 'Cherry'? " + hasCherry);
+
+      // Length
+      alert("Total fruits: " + fruits.length);
+    }
+  </script>
+</body>
+</html>

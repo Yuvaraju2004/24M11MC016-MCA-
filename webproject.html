@@ -1,0 +1,98 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PromptAndOpenWindows</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f4f8;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 50px;
+    }
+
+    input[type="button"] {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      margin-top: 20px;
+    }
+
+    input[type="button"]:hover {
+      background-color: #0056b3;
+    }
+
+    table {
+      margin-top: 30px;
+      border-collapse: collapse;
+      width: 60%;
+      max-width: 500px;
+      background-color: #ffffff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    th, td {
+      padding: 12px 15px;
+      text-align: center;
+      border: 1px solid #ccc;
+    }
+
+    th {
+      background-color: #007BFF;
+      color: white;
+    }
+
+    td {
+      background-color: #f9f9f9;
+    }
+  </style>
+ 
+</head>
+<body>
+    <table border="1" id="votertable" style="display: none;">
+   <tr>
+    <th>name</th>
+    <th>age</th>
+    <th>eligibility</th>
+   </tr>
+   <tr>
+    <td id="pname"></td>
+    <td id="page"></td>
+    <td id="peligibility"></td>
+   </tr>
+  </table>
+  <script>
+    function nameAge()
+    {
+      const name=prompt("Enter your Name")
+      const age=parseInt(prompt("Enter Your Age"))
+      var status
+      if(age>18)
+      {
+       
+        status="Yes"
+      }
+      else
+      {
+        
+        status="no"
+      }
+      document.getElementById("pname").innerHTML=name
+      document.getElementById("page").innerHTML=age
+      document.getElementById("peligibility").innerHTML=status
+      document.getElementById("votertable").style.display="table";
+    }
+   
+  </script>
+  <input type="button" value="Eligibilty Check" onclick="nameAge()">
+  
+</body>
+
+</html>

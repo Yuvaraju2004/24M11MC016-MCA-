@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+<script>
+       const fruit={
+            name:"grapes",
+            price:30,
+            color:"lightgreen",
+            quality:{
+                size:"small",
+                place:"simla"
+            }
+        }
+        let s=" "
+        for(let x in fruit){
+            s+=fruit[x]+"<br>"
+        }
+        document.writeln(s)
+        document.writeln(fruit.name)
+        document.writeln(fruit["price"])
+
+        let x="color"
+        document.writeln(fruit[x])
+        document.writeln(fruit.quality.place)
+        let m="quality"
+        let n="size"
+        document.writeln(fruit[m][n])
+        const person={
+            firstname:"yuvaraju",
+            lastname:"bavirisetti",
+            fullname:function()
+            {
+                return(this.firstname+" "+this.lastname).toUpperCase()
+            }
+        }
+        document.writeln(person.fullname())
+         
+        
+        
+        
+
+    </script>
+    </pre>
+</body>
+</html>

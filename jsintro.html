@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #try{
+            color: rgba(231, 62, 15, 0.715);
+        }
+        button{
+            color: rgb(14, 14, 228);
+            border:opx;
+            border-radius: 10px;
+            padding: 5px;
+
+
+
+        }
+        body{
+            background-color: rgba(142, 191, 175,0.5);
+        }
+        .image1{
+            filter: drop-shadow(10px 7px 10px rgb(14, 54, 172));
+        }
+        .naruto{
+            filter: drop-shadow(10px 7px 10px rgb(222, 131, 206)
+            );
+            cursor: pointer;
+        }
+        .naruto:hover{
+            filter: drop-shadow(10px 7px 10px rgb(22, 131, 206)
+            );
+        }
+        h1{
+            box-sizing: border-box;
+            width: 250px;
+            height: 150px;
+            background:green;
+            margin:auto;
+            color: aliceblue;
+            font-size: 20px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            padding: 10px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1>CHANGE HTML CONTENT</h1>
+    <H2 id="test">modify data</H2>
+
+    <button type="button" onclick='document.getElementById("test").innerHTML="updated information"'>click here</button>
+    <button type="button" onclick='document.getElementById("test").innerHTML="latest information"'>click here</button>
+    <br>
+    <hr>
+    <h3>changing image</h3>
+    <img id="image" src="dragon.jpg" width="100" height="100"><br>
+    <button type="button" onclick='document.getElementById("image").src="love.jpg"'>click here</button>
+    <button type="button" onclick='document.getElementById("image").src="jaguar.jpg"'>click here</button>
+    <button type="button" onclick='document.getElementById("image").src="dragon.jpg"'>show original</button>
+    <hr>
+    <p id="try">changing the font color</p>
+    <button type="button" onclick='document.getElementById("try").style.color="green"'>green</button>
+    <button type="button" onclick='document.getElementById("try").style.color="pink"'>pink</button>
+    <button type="button" onclick='document.getElementById("try").style.color="rgb(255,067,126)"'>random color</button>
+    <hr>
+    <h1 id="none">None,Display</h1>
+    <h2>none data ,haha</h2>
+
+    <button type="button" onclick='document.getElementById("none").style.display="none"'>none</button>
+    <button type="button" onclick='document.getElementById("none").style.display="block"'>display</button><hr>
+    <img src="naruto.png" class="naruto" >
+    <img class="image1" src="butterfly-removebg-preview.png">
+    <hr>
+    <h1>kakashi</h1>
+    
+
+
+   
+
+
+
+</body>
+</html>

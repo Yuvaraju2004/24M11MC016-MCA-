@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>💥 String Methods Exploded</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+    body {
+      margin: 0;
+      padding: 30px;
+      font-family: 'Share Tech Mono', monospace;
+      background: radial-gradient(circle at top, #f6f8f8, #020202);
+      color: #ffffff;
+      overflow-x: hidden;
+      animation: bgGlow 20s ease-in-out infinite alternate;
+    }
+
+    @keyframes bgGlow {
+      0% { background-color: #0f0f0f; }
+      100% { background-color: #1a1a1a; }
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 3em;
+      color: transparent;
+      background-image: linear-gradient(45deg, #00ffe7, #ff00ff, #00ffe7);
+      background-clip: text;
+      -webkit-background-clip: text;
+      animation: gradientText 5s ease-in-out infinite alternate;
+    }
+
+    @keyframes gradientText {
+      0% { background-position: 0% 50%; }
+      100% { background-position: 100% 50%; }
+    }
+
+    #output {
+      margin: 30px auto;
+      max-width: 900px;
+      background: rgba(0, 0, 0, 0.9);
+      border: 2px solid #00ffe7;
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: 0 0 40px #00ffe7;
+      overflow-y: auto;
+      max-height: 70vh;
+      font-size: 1.1em;
+      line-height: 1.8;
+      position: relative;
+    }
+
+    .line {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 8px 0;
+      border-left: 3px solid transparent;
+      animation: slideFade 0.7s ease-in both;
+    }
+
+    .line:hover {
+      background: rgba(255, 255, 255, 0.05);
+      border-left: 3px solid #ff00ff;
+    }
+
+    .number {
+      font-weight: bold;
+      color: #00ffe7;
+      margin-right: 12px;
+      min-width: 30px;
+      text-align: right;
+      text-shadow: 0 0 5px #00ffe7;
+      animation: numberPulse 2s infinite;
+    }
+
+    @keyframes slideFade {
+      from {
+        opacity: 0;
+        transform: translateX(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes numberPulse {
+      0%, 100% { text-shadow: 0 0 5px #00ffe7, 0 0 10px #00ffe7; }
+      50% { text-shadow: 0 0 15px #ff00ff, 0 0 25px #ff00ff; }
+    }
+
+    /* Scrollbar */
+    #output::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    #output::-webkit-scrollbar-thumb {
+      background-color: #00ffe7;
+      border-radius: 10px;
+      border: 2px solid #1a1a1a;
+    }
+
+    #output::-webkit-scrollbar-track {
+      background: #0f0f0f;
+    }
+
+    /* Responsive */
+    @media screen and (max-width: 600px) {
+      h1 {
+        font-size: 2em;
+      }
+
+      #output {
+        font-size: 0.95em;
+        padding: 20px;
+      }
+    }
+
+    /* Custom colors for subheadings */
+    .subheading {
+      color: #ff00ff;
+      font-weight: bold;
+      text-shadow: 0 0 5px #ff00ff, 0 0 10px #ff00ff;
+    }
+  </style>
+</head>
+<body>
+  <h1>🚀 JavaScript String Methods</h1>
+  <div id="output"></div>
+
+  <script>
+    const str = "Hello, World!";
+    const methods = [
+      { subheading: "String (Original):", result: str },
+      { subheading: "Length of the String:", result: str.length },
+      { subheading: "Convert to Uppercase:", result: str.toUpperCase() },
+      { subheading: "Convert to Lowercase:", result: str.toLowerCase() },
+      { subheading: "Find Index of 'World':", result: str.indexOf("World") },
+      { subheading: "Get Substring (0, 5):", result: str.substring(0, 5) },
+      { subheading: "Extract Slice (7, 12):", result: str.slice(7, 12) },
+      { subheading: "Replace 'World' with 'JavaScript':", result: str.replace("World", "JavaScript") },
+      { subheading: "Split by ', ':", result: str.split(", ") },
+      { subheading: "Trim Extra Spaces:", result: str.trim() },
+      { subheading: "Character at Index 1:", result: str.charAt(1) },
+      { subheading: "Last Index of 'o':", result: str.lastIndexOf("o") },
+      { subheading: "Does it include 'Hello'?:", result: str.includes("Hello") },
+      { subheading: "Does it start with 'Hello'?:", result: str.startsWith("Hello") },
+      { subheading: "Does it end with 'World!':", result: str.endsWith("World!") },
+      { subheading: "Repeat the String 3 times:", result: str.repeat(3) },
+      { subheading: "Compare the String Lexicographically:", result: str.localeCompare("Hello, World!") },
+      { subheading: "Value of the String:", result: str.valueOf() },
+      { subheading: "Search for 'World':", result: str.search("World") },
+      { subheading: "Match all occurrences of 'o':", result: str.match(/o/g) },
+      { subheading: "Replace all 'o's with '00':", result: str.replaceAll(/o/g, "00") },
+      { subheading: "Pad Start with '*':", result: str.padStart(20, "*") },
+      { subheading: "Pad End with '.':", result: str.padEnd(20, ".") },
+      { subheading: "String from CharCode (72, 101, 108...):", result: String.fromCharCode(72, 101, 108, 108, 111) },
+      { subheading: "String raw template:", result: String.raw`Hello\nWorld!` },
+      { subheading: "Character at Position 1:", result: str.at(1) },
+      { subheading: "String from Unicode Code Point:", result: String.fromCodePoint(0x1F600) },
+      { subheading: "Does it include 'JavaScript'?:", result: str.includes("JavaScript") },
+      { subheading: "Locale Lowercase:", result: str.toLocaleLowerCase() },
+      { subheading: "Locale Uppercase:", result: str.toLocaleUpperCase() },
+      { subheading: "Convert to String:", result: str.toString() },
+      { subheading: "Split using Regex:", result: str.split(/[, ]+/) },
+      { subheading: "Concatenate with ' How are you?':", result: str.concat(" How are you?") },
+      { subheading: "Include 'World' from Position 5:", result: str.includes("World", 5) },
+      { subheading: "Get Code Point at Position 1:", result: str.codePointAt(1) },
+      { subheading: "Locale-specific String:", result: str.toLocaleString() },
+      { subheading: "String in JSON format:", result: JSON.stringify(str) }
+    ];
+
+    const outputDiv = document.getElementById("output");
+
+    methods.forEach((method, i) => {
+      const line = document.createElement("div");
+      line.className = "line";
+
+      const number = document.createElement("span");
+      number.className = "number";
+      number.textContent = `${i + 1}. `;
+
+      const subheading = document.createElement("span");
+      subheading.className = "subheading"; // Applying subheading color style
+      subheading.textContent = method.subheading;
+
+      const result = document.createElement("span");
+      result.textContent = method.result;
+
+      line.appendChild(number);
+      line.appendChild(subheading);
+      line.appendChild(result);
+      outputDiv.appendChild(line);
+    });
+  </script>
+</body>
+</html>

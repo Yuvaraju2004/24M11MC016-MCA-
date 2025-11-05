@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Object</title>
+</head>
+<body>
+    <pre>
+<script>
+            // String Object
+            var str = "Hello, World!";
+            document.writeln("String: " + str);
+            document.writeln("Length: " + str.length); // Length of the string
+            document.writeln("Uppercase: " + str.toUpperCase()); // Convert to uppercase
+            document.writeln("Lowercase: " + str.toLowerCase()); // Convert to lowercase
+            document.writeln("Index of 'World': " + str.indexOf("World")); // Index of substring
+            document.writeln("Substring (0, 5): " + str.substring(0, 5)); // Substring from index 0 to 5
+            document.writeln("Slice (7, 12): " + str.slice(7, 12)); // Slice from index 7 to 12
+            document.writeln("Replace 'World' with 'JavaScript': " + str.replace("World", "JavaScript")); // Replace substring
+            document.writeln("Split by ', ': " + str.split(", ")); // Split string into array
+            document.writeln("Trimmed String: " + str.trim()); // Trim whitespace from both ends
+            document.writeln("Char at index 1: " + str.charAt(1)); // Character at index 1
+            document.writeln("Last index of 'o': " + str.lastIndexOf("o")); // Last index of substring
+            document.writeln("String includes 'Hello': " + str.includes("Hello")); // Check if string includes substring
+            document.writeln("String starts with 'Hello': " + str.startsWith("Hello")); // Check if string starts with substring
+            document.writeln("String ends with 'World!': " + str.endsWith("World!")); // Check if string ends with substring
+            document.writeln("String repeat 3 times: " + str.repeat(3)); // Repeat string 3 times
+            document.writeln("String localeCompare: " + str.localeCompare("Hello, World!")); // Compare two strings in locale-specific order
+            document.writeln("String valueOf: " + str.valueOf()); // Get primitive value of string object
+            document.writeln("String search 'World': " + str.search("World")); // Search for substring and return index
+            document.writeln("String match 'o': " + str.match(/o/g)); // Match all occurrences of 'o'
+            document.writeln("String replaceAll 'o': " + str.replaceAll(/o/g, "00")); // Replace all occurrences of 'o' with '00'
+            document.writeln("String padStart: " + str.padStart(20, "")); // Pad string to the start with ''
+            document.writeln("String padEnd: " + str.padEnd(20, "")); // Pad string to the end with ''
+            document.writeln("String fromCharCode: " + String.fromCharCode(72, 101, 108, 108, 111)); // Convert char codes to string
+            document.writeln("String raw: " + String.raw`Hello\nWorld!`); // Raw string with escape sequences
+            document.writeln("String at: " + str.at(1)); // Get character at index 1 using at() method
+            document.writeln("String fromCodePoint: " + String.fromCodePoint(0x1F600)); // Convert code point to string (grinning face emoji)
+            document.writeln("String includes 'JavaScript': " + str.includes("JavaScript")); // Check if string includes substring
+            document.writeln("String toLocaleLowerCase: " + str.toLocaleLowerCase()); // Convert to lowercase in locale-specific manner
+            document.writeln("String toLocaleUpperCase: " + str.toLocaleUpperCase()); // Convert to uppercase in locale-specific manner
+            document.writeln("String toString: " + str.toString()); // Convert string object to primitive string
+            document.writeln("String split with regex: " + str.split(/[, ]+/)); // Split string using regex
+            document.writeln("String concat: " + str.concat(" How are you?")); // Concatenate strings
+            document.writeln("String includes with position: " + str.includes("World", 5)); // Check if string includes substring starting from index 5
+            document.writeln("String codePointAt: " + str.codePointAt(1)); // Get Unicode code point at index 1
+            document.writeln("String toLocaleString: " + str.toLocaleString()); // Convert string to locale-specific string
+            document.writeln("String toSource: " + str.toSource()); // Get string representation of the object (not standard)
+            document.writeln("String toJSON: " + JSON.stringify(str)); // Convert string to JSON format
+        </script>
+    </pre>
+</body>
+</html>

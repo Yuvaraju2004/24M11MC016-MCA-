@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    .<!--. Write a program which asks the user to enter three integers, obtains the numbers 
+from the user and outputs HTML text that displays the larger number followed by 
+the words “LARGER NUMBER” in an information message dialog. If the numbers 
+are equal, output HTML text as “EQUAL NUMBERS”.-->
+<script>
+    let a=parseInt(prompt("enter first number"))
+    let b=parseInt(prompt("enter second number"))
+    let c=parseInt(prompt("enter third number"))
+
+    
+    let message = "";
+
+    if (a === b && b === c) {
+        message = "given numbers are equal";
+    } else {
+        let max = Math.max(a,b,c);
+        message = max + "is large number";
+    }
+    alert(message);
+    document.write("<h2>" + message + "</h2>");
+    
+</script>
+</body>
+</html>

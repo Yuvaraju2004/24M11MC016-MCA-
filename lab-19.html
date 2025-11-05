@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+</head>
+<body>
+    <h2>REGISTRATION FORM</h2>
+    <form onsubmit="return myfun()">
+        Name: <input type="text" placeholder=":enter your name" id="name"><br><br>
+        Mobile: <input type="number" placeholder=":enter number" id="number"><br><br>
+        Email: <input type="email" placeholder="enter your mail" id="email"><br><br>
+        <input type="submit" value="Register">
+    </form>
+
+   
+    <div id="output"></div>
+
+    <script>
+        function myfun() {
+            const name = document.getElementById("name").value.trim();
+            const number = document.getElementById("number").value.trim();
+            const email = document.getElementById("email").value.trim();
+
+            const namepattern = /^[A-Za-z][A-Za-z0-9]{5,}$/;
+            const numberpattern = /^[0-9]{10}$/;
+            const emailpattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            if (!namepattern.test(name)) {
+                alert("Invalid name: Minimum 6 characters, must start with a letter.");
+                return false;
+            }
+
+            if (!numberpattern.test(number)) {
+                alert("Invalid number: Must be exactly 10 digits.");
+                return false;
+            }
+
+            if (!emailpattern.test(email)) {
+                alert("Invalid email.");
+                return false;
+            }
+
+            alert("Registration successful!");
+
+            
+            document.getElementById("output").innerHTML = `
+                <marquee direction="right" scrollamount=100><p><u><mark>Submitted Details:</u><mark></p></marquee>
+                <p>Name: ${name}</p>
+                <p>Mobile: ${number}</p>
+                <p>Email: ${email}</p>
+            `;
+
+            return false; 
+        }
+    </script>
+</body>
+</html>

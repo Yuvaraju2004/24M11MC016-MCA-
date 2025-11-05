@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    h1{
+        box-sizing: border-box;
+        width: 250px;
+        height: 150px;
+        background:green;
+        margin:auto;
+        color: aliceblue;
+        font-size: 20px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        padding: 10px;
+    }
+    
+    .image1{
+        box-shadow: 10px 7px 20px rgb(216, 106, 22);
+    }
+    .image2{
+        filter: drop-shadow(10px 7px 10px orange);
+    }
+
+
+</style>
+</head>
+<body>
+    <h1 class="external">Welcome to mca students</h1>
+    <script>
+        let h1=document.querySelector(".external");
+        h1.addEventListener("mouseenter",function(e){
+            h1.innerHTML="set hour ";
+        });
+    
+            
+    
+
+
+    </script>
+    <hr>
+    <img class="image1" src="dragon.jpg" height="200px" width="200px"><hr>
+    <img class="image2" src="jaguar.jpg" height="200px" width="200px">
+    
+</body>
+</html>

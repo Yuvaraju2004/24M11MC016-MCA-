@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>PromptAndOpenWindows</title>
+</head>
+<body>
+
+  <table border="1" id="votertable" style="display: none;">
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Eligibility</th>
+    </tr>
+    <tr>
+      <td id="pname"></td>
+      <td id="page"></td>
+      <td id="peligibility"></td>
+    </tr>
+  </table>
+
+  <script>
+    function nameAge() {
+      var name = prompt("Enter your Name");
+      var age = parseInt(prompt("Enter Your Age"));
+      var status;
+
+      if (age >= 18) {
+        status = "Yes";
+      } else {
+        status = "No";
+      }
+
+      document.getElementById("pname").innerHTML = name;
+      document.getElementById("page").innerHTML = age;
+      document.getElementById("peligibility").innerHTML = status;
+      document.getElementById("votertable").style.display = "table";
+    }
+  </script>
+
+  <input type="button" value="Eligibility Check" onclick="nameAge()">
+
+</body>
+</html>

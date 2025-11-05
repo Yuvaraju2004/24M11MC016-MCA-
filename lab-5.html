@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Document Object Methods</title>
+</head>
+<body>
+
+  <h2 id="heading">Welcome to Document Object Example</h2>
+
+  <input type="text" name="username" placeholder="Enter your name"><br><br>
+  <button onclick="showDetails()">Click Me</button>
+
+  <p id="output"></p>
+
+  <script>
+    // Using write and writeln
+    document.write("This is printed using document.write()<br>");
+    document.writeln("This is printed using document.writeln()<br><br>");
+
+    function showDetails() {
+      // getElementById
+      document.getElementById("heading").innerHTML = "Heading changed using getElementById()";
+
+      // getElementsByName
+      var nameValue = document.getElementsByName("username")[0].value;
+
+      // getElementsByTagName
+      var totalInputs = document.getElementsByTagName("input").length;
+
+      // Show result
+      document.getElementById("output").innerHTML = 
+        "You entered: " + nameValue + "<br>" +
+        "Total <input> elements: " + totalInputs;
+    }
+  </script>
+
+</body>
+</html>

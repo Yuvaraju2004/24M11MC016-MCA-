@@ -1,0 +1,39 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <pre>
+<script>
+                const d1=new Date();//display date
+                document.writeln(d1)
+                const d2=new Date(2015,13,25,10,34,55,654)
+                document.writeln(d2)//set and get date
+            d2.setDate(d2.getDate()+2)
+                document.writeln(d2)//form of milliseconds
+                const d3=new Date(86400000);
+                document.writeln(d3)
+                const d4=new Date("may 25 2015");//strings
+                document.writeln(d4)
+                const d7=new Date(4*86400000);
+                document.writeln(d7+"hai")
+
+                var date=new Date();
+                var d=date.getDate();
+                var m=date.getMonth()+1;
+                var y=date.getFullYear();
+                document.writeln("today date is "+d+"/"+m+"/"+y);
+              
+                const date1=new Date(23,55,25)
+                document.writeln(date1);
+                date1.setDate(date1.getDate()+2)
+                document.writeln(date1);
+                const d6=new Date(2016,1,30)
+                document.writeln(d6);
+            </script>
+        </pre>
+    </body>
+    </html>
